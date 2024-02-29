@@ -1,22 +1,46 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class BookStore {
-  private Book[] booksCollection;
-  private Book[] cart;
+  private List<Book> store;
 
-  public void addBookToCollections() {
-    // code here
+  public BookStore() {
+    this.store = new ArrayList<>();
   }
 
-  public void removeBookFromCollection() {
-    // code here
+  // ===== BOOK COLLECTION CONTROLLER
+  public void addBookToStore(Book book) {
+    this.store.add(book);
+    System.out.println("\nYour store: ");
+
+    this.displayBookInStore();
   }
 
-  public void getBooksCollection() {
+  public void removeBookFromStore(int bookId) {
     // code here
+    this.store.removeIf(b -> b.bookId == bookId);
+    System.out.println("\nYou removed book with id " + bookId + " from store");
+    System.out.println("Your store: ");
+
+    this.displayBookInStore();
   }
 
-  public Book[] getCartContet() {
-    // code here
+  public List<Book> getBookStore() {
+    return this.store;
   }
 
-  public void 
+  public int getTotalBookPrice() {
+    int totalPrice = 0;
+    for (Book book : this.store) {
+      totalPrice += book.price;
+    }
+
+    return totalPrice;
+  }
+
+  public void displayBookInStore() {
+    for (Book book : this.store) {
+      System.out.println(book);
+    }
+  }
 }
