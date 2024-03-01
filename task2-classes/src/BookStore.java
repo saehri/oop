@@ -23,8 +23,8 @@ public class BookStore {
     return this.store;
   }
 
-  public int getTotalBookPrice() {
-    int totalPrice = 0;
+  public double getTotalBookPrice() {
+    double totalPrice = 0;
     for (Book book : this.store) {
       totalPrice += book.price;
     }
