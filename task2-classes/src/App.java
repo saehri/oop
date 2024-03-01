@@ -14,11 +14,25 @@ public class App {
 
     // Add initial data to store
     bookStore.addBookToStore(new Book(0, "The Life of Me", "James", 120, 1));
+
+    // See the current store state
+    bookStore.displayBookInStore();
+
     bookStore.addBookToStore(new Book(1, "Happy Life Happy Me", "James", 90, 1));
+
+    // See the current store state
+    bookStore.displayBookInStore();
+
     bookStore.addBookToStore(new Book(2, "How it Works", "James", 60, 1));
+
+    // See the current store state
+    bookStore.displayBookInStore();
 
     // Remove book with id 1 from store;
     bookStore.removeBookFromStore(1);
+
+    // See the current store state
+    bookStore.displayBookInStore();
 
     // Get total price of books in the store;
     System.out.println("The total of books in the store is " + bookStore.getTotalBookPrice());
