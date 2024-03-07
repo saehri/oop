@@ -1,6 +1,6 @@
 ## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Welcome to Task 3. In this task we will explore Classes and Inheritance in Java programming language. To get started you can download the code, extract it, and run it on your local machine. PS: Make sure you already installed Java and its latest JDK before you run the program.
 
 ## Folder Structure
 
